@@ -230,7 +230,12 @@ def custom_count(input_list, value):
         like input_list.count(value), should return the number of times the specified
         value appears in the list.
     """
-    pass
+    count = 0
+
+    for item in input_list:
+        if item == value:
+            count += 1
+    return count
 
 def custom_reverse(input_list):
     """
