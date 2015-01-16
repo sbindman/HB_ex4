@@ -216,7 +216,13 @@ def custom_index(input_list, value):
         like input_list.index(value), should return the index of the first item 
         which matches the specified value
     """
-    pass
+    index = 0
+    for item in input_list:
+        if item == value:
+            return index
+        else:
+            index += 1      
+    return
 
 #4 failures left
 def custom_count(input_list, value):
