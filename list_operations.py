@@ -25,28 +25,28 @@ def head(input_list):
         Return the first element of the input list.
         [ A, B, C, D, E, F ] --> A
     """
-    pass
+    return input_list[0]
 
 def tail(input_list):
     """
         Return all elements of the input list except the first.
         [ A, B, C, D ] --> [ B, C, D ]
     """
-    pass
+    return input_list[1:]
 
 def last(input_list):
     """
         Return the last element of the input list.
         [ A, B, C, D ] --> D
     """
-    pass
+    return input_list[-1]
 
 def init(input_list):
     """
         Return all elements of the input list except the last.
         [ A, B, C, D ] --> [ A, B, C ]
     """
-    pass
+    return input_list[:-1]
 
 """
 Do yourself a favor and get a short code review here.
@@ -58,51 +58,53 @@ def first_three(input_list):
         Return the first three elements of the input list.
         [ A, B, C, D, E, F ] --> [ A, B, C ]
     """
-    pass
+    return input_list[:3]
 
 def last_five(input_list):
     """
         Return the last five elements of the input list.
         [ A, B, C, D, E, F ] --> [ B, C, D, E, F ]
     """
-    pass
+    return input_list[-5:]
 
 def middle(input_list):
     """
         Return all elements of the input list except the first two and the last two.
         [ A, B, C, D, E, F ] --> [ C, D ]
     """
-    pass
-
+    return input_list[2:-2]
+    
 def inner_four(input_list):
     """
         Return the third, fourth, fifth, and sixth elements of the input list.
         [ A, B, C, D, E, F, G ] --> [ C, D, E, F ]
     """
-
-    pass
+    return input_list[2:6]
 
 def inner_four_end(input_list):
     """
         Return the sixth, fifth, fourth, and third elements from the end of the 
         list, in that order.
-        [ A, B, C, D, E, F, G ] --> [ F, E, D, C ]
+        [ A, B, C, D, E, F, G ] --> [ B, C, D, E ]
     """
-    pass
+    return input_list[-6:-2]
 
 def replace_head(input_list):
     """
         Replace the head of the input list with the value 42.
         [ A, B, C, D ] --> [ 42, B, C, D]
     """
-    pass
+    input_list[0] = 42
+    return input_list
 
 def replace_third_and_last(input_list):
     """
         Replace the third and last elements of the input list with the value 37.
         [ A, B, C, D, E, F ] --> [ A, B, 37, D, E, 37 ]
     """
-    pass
+    input_list[2] = 37
+    input_list[-1] = 37
+    return input_list
 
 def replace_middle(input_list):
     """
@@ -110,15 +112,17 @@ def replace_middle(input_list):
         that order, except for the first two and last two elements.
         [ A, B, C, D, E, F, G, H, I ] --> [ A, B, 42, 37, H, I ] 
     """
-
-    pass
+    input_list[2:-2] = [42, 37]
+    return input_list
 
 def delete_third_and_seventh(input_list):
     """
         Remove the third and seventh elements of the input list.
         [ A, B, C, D, E, F, G, H ] --> [ A, B, D, E, F, H ]
     """
-    pass
+    del input_list[6]
+    del input_list[2]
+    return input_list
 
 def delete_middle(input_list):
     """
@@ -126,7 +130,8 @@ def delete_middle(input_list):
         last two.
          [ A, B, C, D, E, F, G, H ] --> [ A, B, G, H ]
     """
-    pass
+    del input_list[2:-2]
+    return input_list
 
 """
 Part 1 is finished! Ask for a code review before proceeding to Part 2.
@@ -147,12 +152,15 @@ for each function. Play with the built-in methods in the Python REPL to get a fe
 for how they work before trying to write your custom version. You may also look at
 the test_list_operations.py file for concrete examples of expected behavior.
 """
+#11 failures left
 
 def custom_len(input_list):
     """
         like len(input_list), should return the number of items in the list
     """
     pass
+
+#10 failures left
 
 # For the next four functions, get clever using slice operations described in the first half
 def custom_append(input_list, value):
@@ -162,6 +170,7 @@ def custom_append(input_list, value):
     """
     pass
 
+#9 failures left
 def custom_extend(input_list, second_list):
     """
         like input_list.extend(second_list), should append every item in the second 
@@ -169,6 +178,7 @@ def custom_extend(input_list, second_list):
     """
     pass
 
+#8 failures left
 def custom_insert(input_list, index, value):
     """
         like input_list.insert(index, value), should insert (not replace) the value
@@ -176,6 +186,7 @@ def custom_insert(input_list, index, value):
     """
     pass
 
+#7 failures left
 def custom_remove(input_list, value):
     """
         like input_list.remove(value), should remove the first item of the 
@@ -183,6 +194,7 @@ def custom_remove(input_list, value):
     """
     pass
 
+#6 failures left
 def custom_pop(input_list):
     """
         like input_list.pop(), should remove the last item in the list and 
@@ -190,6 +202,7 @@ def custom_pop(input_list):
     """
     pass
 
+#5 failures left
 def custom_index(input_list, value):
     """
         like input_list.index(value), should return the index of the first item 
@@ -197,6 +210,7 @@ def custom_index(input_list, value):
     """
     pass
 
+#4 failures left
 def custom_count(input_list, value):
     """
         like input_list.count(value), should return the number of times the specified
