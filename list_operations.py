@@ -172,13 +172,14 @@ def custom_append(input_list, value):
     input_list[list_length:] = [value]
     return
 
-#9 failures left
 def custom_extend(input_list, second_list):
     """
         like input_list.extend(second_list), should append every item in the second 
         list to the end of the first list and return nothing
     """
-    pass
+    list_length = custom_len(input_list)
+    input_list[list_length:] = second_list
+    return
 
 #8 failures left
 def custom_insert(input_list, index, value):
