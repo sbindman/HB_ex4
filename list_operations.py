@@ -244,13 +244,15 @@ def custom_reverse(input_list):
     input_list[:] = input_list[::-1]
     return
 
-#3 failures left
 def custom_contains(input_list, value):
     """
         like (value in input_list), should return True if the list contains the
         specified value and False if it does not 
     """
-    pass
+    for item in input_list:
+        if item == value:
+            return True  
+    return False
 
 def custom_equality(some_list, another_list):
     """
