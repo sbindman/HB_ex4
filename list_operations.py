@@ -242,7 +242,8 @@ def custom_reverse(input_list):
         like input_list.reverse(), should reverse the elements of the original list
         and return nothing (we call this reversing "in place")
     """
-    pass
+    input_list[1:-1:-1]
+    return
 
 def custom_contains(input_list, value):
     """
