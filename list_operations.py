@@ -189,13 +189,18 @@ def custom_insert(input_list, index, value):
     input_list[index:index] = [value]
     return
 
-#7 failures left
 def custom_remove(input_list, value):
     """
         like input_list.remove(value), should remove the first item of the 
         value specified and return nothing
     """
-    pass
+    index = 0
+    for item in input_list:
+        if item == value:
+            input_list[index:index+1] = [] 
+            break
+        index += 1      
+    return
 
 #6 failures left
 def custom_pop(input_list):
