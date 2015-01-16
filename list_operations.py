@@ -181,13 +181,13 @@ def custom_extend(input_list, second_list):
     input_list[list_length:] = second_list
     return
 
-#8 failures left
 def custom_insert(input_list, index, value):
     """
         like input_list.insert(index, value), should insert (not replace) the value
         at the specified index of the input list and return nothing
     """
-    pass
+    input_list[index:index] = [value]
+    return
 
 #7 failures left
 def custom_remove(input_list, value):
