@@ -224,7 +224,6 @@ def custom_index(input_list, value):
             index += 1      
     return
 
-#4 failures left
 def custom_count(input_list, value):
     """
         like input_list.count(value), should return the number of times the specified
@@ -242,9 +241,10 @@ def custom_reverse(input_list):
         like input_list.reverse(), should reverse the elements of the original list
         and return nothing (we call this reversing "in place")
     """
-    input_list[1:-1:-1]
+    input_list[:] = input_list[::-1]
     return
 
+#3 failures left
 def custom_contains(input_list, value):
     """
         like (value in input_list), should return True if the list contains the
