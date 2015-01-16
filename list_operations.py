@@ -259,7 +259,8 @@ def custom_equality(some_list, another_list):
         like (some_list == another_list), should return True if both lists contain
         the same values in the same indexes
     """
-    pass
+    if some_list[:] == another_list[:]:
+        return True
 
 """
 Part 2 is finished! Required: Ask for a code review. Optional: High-Five
