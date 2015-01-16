@@ -152,15 +152,15 @@ for each function. Play with the built-in methods in the Python REPL to get a fe
 for how they work before trying to write your custom version. You may also look at
 the test_list_operations.py file for concrete examples of expected behavior.
 """
-#11 failures left
-
 def custom_len(input_list):
     """
         like len(input_list), should return the number of items in the list
     """
-    pass
+    count = 0
 
-#10 failures left
+    for item in input_list:
+        count += 1
+    return count
 
 # For the next four functions, get clever using slice operations described in the first half
 def custom_append(input_list, value):
@@ -168,7 +168,9 @@ def custom_append(input_list, value):
         like input_list.append(value), should add the value to the end of the list
         and return nothing
     """
-    pass
+    list_length = custom_len(input_list)
+    input_list[list_length:] = [value]
+    return
 
 #9 failures left
 def custom_extend(input_list, second_list):
