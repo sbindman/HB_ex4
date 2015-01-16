@@ -202,15 +202,15 @@ def custom_remove(input_list, value):
         index += 1      
     return
 
-#6 failures left
 def custom_pop(input_list):
     """
         like input_list.pop(), should remove the last item in the list and 
         return it
     """
-    pass
+    item_to_pop = input_list[-1]
+    input_list[-1:] = []
+    return item_to_pop
 
-#5 failures left
 def custom_index(input_list, value):
     """
         like input_list.index(value), should return the index of the first item 
